@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="c++," />
 
 
 
@@ -87,15 +87,17 @@
 
 
 
-<meta name="description" content="All about him.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liu Chang's Blog">
-<meta property="og:url" content="http://liuchang1437.github.io/index.html">
+<meta name="description" content="Basic conceptsA vector is a collection of objects, all of which have the same type.  123456#include &amp;lt;vector&amp;gt;using std::vector;// A vector is a class template.vector&amp;lt;int&amp;gt; ivec;vector&amp;lt;vec">
+<meta name="keywords" content="c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vector in C++ 11">
+<meta property="og:url" content="http://liuchang1437.github.io/2017/04/27/vector-in-C-11/index.html">
 <meta property="og:site_name" content="Liu Chang's Blog">
-<meta property="og:description" content="All about him.">
+<meta property="og:description" content="Basic conceptsA vector is a collection of objects, all of which have the same type.  123456#include &amp;lt;vector&amp;gt;using std::vector;// A vector is a class template.vector&amp;lt;int&amp;gt; ivec;vector&amp;lt;vec">
+<meta property="og:updated_time" content="2017-04-27T12:18:57.393Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liu Chang's Blog">
-<meta name="twitter:description" content="All about him.">
+<meta name="twitter:title" content="vector in C++ 11">
+<meta name="twitter:description" content="Basic conceptsA vector is a collection of objects, all of which have the same type.  123456#include &amp;lt;vector&amp;gt;using std::vector;// A vector is a class template.vector&amp;lt;int&amp;gt; ivec;vector&amp;lt;vec">
 
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://liuchang1437.github.io/"/>
+  <link rel="canonical" href="http://liuchang1437.github.io/2017/04/27/vector-in-C-11/"/>
 
 
 
 
 
-  <title> Liu Chang's Blog </title>
+  <title> vector in C++ 11 | Liu Chang's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +239,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,10 +271,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/27/vector-in-C-11/" itemprop="url">
-                  vector in C++ 11
-                </a>
+                vector in C++ 11
               
             
           </h1>
@@ -325,9 +322,7 @@
       
 
       
-        
-          
-            <h2 id="Basic-concepts"><a href="#Basic-concepts" class="headerlink" title="Basic concepts"></a>Basic concepts</h2><p>A <code>vector</code> is a collection of objects, all of which have the same type. </p>
+        <h2 id="Basic-concepts"><a href="#Basic-concepts" class="headerlink" title="Basic concepts"></a>Basic concepts</h2><p>A <code>vector</code> is a collection of objects, all of which have the same type. </p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">vector</span>;</div><div class="line"></div><div class="line"><span class="comment">// A vector is a class template.</span></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ivec;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; file;</div></pre></td></tr></table></figure>
 <h2 id="Defining-and-initializing-vectors"><a href="#Defining-and-initializing-vectors" class="headerlink" title="Defining and initializing vectors"></a>Defining and initializing vectors</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>&lt;T&gt; v1;</div><div class="line"><span class="built_in">vector</span>&lt;T&gt; v2(v1);</div><div class="line"><span class="built_in">vector</span>&lt;T&gt; v2=v1;</div><div class="line"><span class="built_in">vector</span>&lt;T&gt; v3(n, val);</div><div class="line"><span class="built_in">vector</span>&lt;T&gt; v4(n);			<span class="comment">// v4 has n copies of a value-initialized object.</span></div><div class="line"><span class="built_in">vector</span>&lt;T&gt; v5&#123;a,b,c ...&#125;</div><div class="line"><span class="built_in">vector</span>&lt;T&gt; v5 = &#123;a,b,c ...&#125;</div></pre></td></tr></table></figure>
 <h2 id="Other-operations"><a href="#Other-operations" class="headerlink" title="Other operations"></a>Other operations</h2><h3 id="push-back"><a href="#push-back" class="headerlink" title="push_back"></a>push_back</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v1.push_back(<span class="number">9</span>);</div></pre></td></tr></table></figure>
@@ -335,181 +330,72 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">v.empty(); 	<span class="comment">//判断空</span></div><div class="line">v.size(); 	<span class="comment">//返回vector大小, vector&lt;T&gt;::size_type</span></div><div class="line">v.push_back(t);</div><div class="line">v[n]; 		</div><div class="line">v1 = v2; 	<span class="comment">//复制</span></div><div class="line">v1 = &#123;a,b,c...&#125;;</div><div class="line"></div><div class="line">v1 == v2;</div><div class="line">v1 != v2; 	<span class="comment">//判断是否不等</span></div><div class="line">&lt;, &lt;=, &gt;, &gt;= 		<span class="comment">//比较大小，字典序。</span></div></pre></td></tr></table></figure>
 <p><em>Other operations are not mentioned in this chapter. I will complement it later.</em></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://liuchang1437.github.io/2017/04/27/string-in-C-11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Chang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Liu Chang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/27/string-in-C-11/" itemprop="url">
-                  string in C++ 11
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T15:17:05+08:00">
-                2017-04-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/c/" rel="tag"># c++</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <p>跟着第五版<code>C++ Primer</code>重新学习，在此做些笔记。</p>
-<h2 id="Basic-Concepts"><a href="#Basic-Concepts" class="headerlink" title="Basic Concepts"></a>Basic Concepts</h2><p><code>string</code>是可变长度的字符串，在”string”头文件中定义，属于<code>std</code>命名空间</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">string</span>;</div></pre></td></tr></table></figure>
-<h2 id="Defining-and-Initializing-strings"><a href="#Defining-and-Initializing-strings" class="headerlink" title="Defining and Initializing strings"></a>Defining and Initializing strings</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">string</span> s1;				<span class="comment">//Default empty string.</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(s1)</span></span>; 			<span class="comment">//s2 is a copy of s1.</span></div><div class="line"><span class="built_in">string</span> s2=s1; 			<span class="comment">//s2 is a copy of s1.</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">s3</span><span class="params">(<span class="string">"value"</span>)</span></span>; 	<span class="comment">//s3 is a copy of the string literal, not including the null.</span></div><div class="line"><span class="built_in">string</span> s3=<span class="string">"value"</span>; 		<span class="comment">//The same as above.</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">s4</span><span class="params">(n, <span class="string">'c'</span>)</span></span>; 		<span class="comment">//Initialize s4 with n copies of the character 'c'.</span></div></pre></td></tr></table></figure>
-<p><em>Note</em>: If using <code>=</code>, <strong>copy initialize</strong>. Otherwise, <strong>direct initialization</strong>.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">string</span> s8 = <span class="built_in">string</span>(<span class="number">10</span>, <span class="string">'c'</span>); <span class="comment">// copy initialization; s8 is cccccccccc</span></div><div class="line"></div><div class="line"><span class="comment">//The above equals to</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">temp</span><span class="params">(<span class="number">10</span>,<span class="string">'c'</span>)</span></span>;</div><div class="line"><span class="built_in">string</span> s8 = temp;</div><div class="line"></div><div class="line"><span class="comment">// Why not use direct initialization?</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">s8</span><span class="params">(<span class="number">10</span>,<span class="string">'c'</span>)</span></span>;</div></pre></td></tr></table></figure>
-<h2 id="Operations-on-strings"><a href="#Operations-on-strings" class="headerlink" title="Operations on strings"></a>Operations on strings</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">os &lt;&lt; s; 	<span class="comment">//输出；返回左边的操作符作为结果，因此可以将多个输出写成链式。</span></div><div class="line">is &lt;&lt; s; 	<span class="comment">//输入，以空白字符为分隔符</span></div><div class="line">getline(is, s); 	<span class="comment">//读入一行，not including the new line</span></div><div class="line">s.empty(); 	<span class="comment">//判断空</span></div><div class="line">s.size(); 	<span class="comment">//返回字符串大小, string::size_type</span></div><div class="line">s[n]; 		<span class="comment">//返回s的第n个char的reference</span></div><div class="line">s1 + s2; 	<span class="comment">//拼接，可以有string literal类型，但必须至少有一个操作数是string 类型。</span></div><div class="line">s1 = s2; 	<span class="comment">//复制</span></div><div class="line">s1 == s2; 	<span class="comment">//判断是否相等</span></div><div class="line">s1 != s2; 	<span class="comment">//判断是否不等</span></div><div class="line">&lt;, &lt;=, &gt;, &gt;= 		<span class="comment">//比较大小，字典序。</span></div><div class="line">  </div><div class="line"><span class="comment">// cctype functions</span></div><div class="line"><span class="built_in">isalnum</span>(c);</div><div class="line"><span class="built_in">isalpha</span>(c);</div><div class="line"><span class="built_in">iscntrl</span>(c);</div><div class="line"><span class="built_in">isdigit</span>(c);</div><div class="line"><span class="built_in">isgraph</span>(c); 	<span class="comment">//true if c is not a space but is printable.</span></div><div class="line"><span class="built_in">islower</span>(c);</div><div class="line"><span class="built_in">isprint</span>(c);</div><div class="line"><span class="built_in">ispunct</span>(c);</div><div class="line"><span class="built_in">isspace</span>(c);</div><div class="line"><span class="built_in">isupper</span>(c);</div><div class="line"><span class="built_in">isxdigit</span>(c);</div><div class="line"><span class="built_in">tolower</span>(c);</div><div class="line"><span class="built_in">toupper</span>(c);</div></pre></td></tr></table></figure>
-<h3 id="Range-Based-for"><a href="#Range-Based-for" class="headerlink" title="Range-Based for"></a>Range-Based for</h3><ul>
-<li>这个功能对于C++有点新颖了，很像python！</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (declaration : expression)</div><div class="line">statement</div><div class="line"></div><div class="line"><span class="comment">// example</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="string">"some string"</span>)</span></span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> c: str)</div><div class="line"><span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line"><span class="comment">// change char in a string</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;c: str)</div><div class="line">c = <span class="built_in">toupper</span>(c);</div></pre></td></tr></table></figure>
-<h3 id="Using-a-subscript-for-iteration"><a href="#Using-a-subscript-for-iteration" class="headerlink" title="Using a subscript for iteration"></a>Using a subscript for iteration</h3><ul>
-<li><p>注意 <code>decltype()</code>，C++ 11 新加的功能</p>
-<blockquote>
-<p>return the type of its operand.</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">decltype</span>(s.size()) index=<span class="number">0</span>; index!- s.size() &amp;&amp; !<span class="built_in">isspace</span>(s[index]); ++index)</div><div class="line">s[index] = <span class="built_in">toupper</span>(s[index]);</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/27/string-in-C-11/" rel="prev" title="string in C++ 11">
+                string in C++ 11 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -517,6 +403,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -536,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -590,6 +489,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-concepts"><span class="nav-number">1.</span> <span class="nav-text">Basic concepts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Defining-and-initializing-vectors"><span class="nav-number">2.</span> <span class="nav-text">Defining and initializing vectors</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-operations"><span class="nav-number">3.</span> <span class="nav-text">Other operations</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push-back"><span class="nav-number">3.1.</span> <span class="nav-text">push_back</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -697,6 +612,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
