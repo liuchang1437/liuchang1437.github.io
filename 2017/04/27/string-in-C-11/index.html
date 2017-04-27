@@ -87,15 +87,17 @@
 
 
 
-<meta name="description" content="All about him.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liu Chang's Blog">
-<meta property="og:url" content="http://liuchang1437.github.io/index.html">
+<meta name="description" content="跟着第五版C++ Primer重新学习，在此做些笔记。 Basic Conceptsstring是可变长度的字符串，在”string”头文件中定义，属于std命名空间 12#include &amp;lt;string&amp;gt;using std::string; Defining and Initializing strings123456string s1;				//Default empty str">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="string in C++ 11">
+<meta property="og:url" content="http://liuchang1437.github.io/2017/04/27/string-in-C-11/index.html">
 <meta property="og:site_name" content="Liu Chang's Blog">
-<meta property="og:description" content="All about him.">
+<meta property="og:description" content="跟着第五版C++ Primer重新学习，在此做些笔记。 Basic Conceptsstring是可变长度的字符串，在”string”头文件中定义，属于std命名空间 12#include &amp;lt;string&amp;gt;using std::string; Defining and Initializing strings123456string s1;				//Default empty str">
+<meta property="og:updated_time" content="2017-04-27T07:26:59.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liu Chang's Blog">
-<meta name="twitter:description" content="All about him.">
+<meta name="twitter:title" content="string in C++ 11">
+<meta name="twitter:description" content="跟着第五版C++ Primer重新学习，在此做些笔记。 Basic Conceptsstring是可变长度的字符串，在”string”头文件中定义，属于std命名空间 12#include &amp;lt;string&amp;gt;using std::string; Defining and Initializing strings123456string s1;				//Default empty str">
 
 
 
@@ -123,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://liuchang1437.github.io/"/>
+  <link rel="canonical" href="http://liuchang1437.github.io/2017/04/27/string-in-C-11/"/>
 
 
 
 
 
-  <title> Liu Chang's Blog </title>
+  <title> string in C++ 11 | Liu Chang's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -154,9 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,9 +239,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -271,10 +271,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/04/27/string-in-C-11/" itemprop="url">
-                  string in C++ 11
-                </a>
+                string in C++ 11
               
             
           </h1>
@@ -325,9 +322,7 @@
       
 
       
-        
-          
-            <p>跟着第五版<code>C++ Primer</code>重新学习，在此做些笔记。</p>
+        <p>跟着第五版<code>C++ Primer</code>重新学习，在此做些笔记。</p>
 <h2 id="Basic-Concepts"><a href="#Basic-Concepts" class="headerlink" title="Basic Concepts"></a>Basic Concepts</h2><p><code>string</code>是可变长度的字符串，在”string”头文件中定义，属于<code>std</code>命名空间</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">string</span>;</div></pre></td></tr></table></figure>
 <h2 id="Defining-and-Initializing-strings"><a href="#Defining-and-Initializing-strings" class="headerlink" title="Defining and Initializing strings"></a>Defining and Initializing <code>strings</code></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">string</span> s1;				<span class="comment">//Default empty string.</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(s1)</span></span>; 			<span class="comment">//s2 is a copy of s1.</span></div><div class="line"><span class="built_in">string</span> s2=s1; 			<span class="comment">//s2 is a copy of s1.</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">s3</span><span class="params">(<span class="string">"value"</span>)</span></span>; 	<span class="comment">//s3 is a copy of the string literal, not including the null.</span></div><div class="line"><span class="built_in">string</span> s3=<span class="string">"value"</span>; 		<span class="comment">//The same as above.</span></div><div class="line"><span class="function"><span class="built_in">string</span> <span class="title">s4</span><span class="params">(n, <span class="string">'c'</span>)</span></span>; 		<span class="comment">//Initialize s4 with n copies of the character 'c'.</span></div></pre></td></tr></table></figure>
@@ -350,20 +345,27 @@
 </li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -371,21 +373,22 @@
       
 
       
-
+        
       
 
       
+
       
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -393,6 +396,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -412,8 +419,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -457,6 +473,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Concepts"><span class="nav-number">1.</span> <span class="nav-text">Basic Concepts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Defining-and-Initializing-strings"><span class="nav-number">2.</span> <span class="nav-text">Defining and Initializing strings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Operations-on-strings"><span class="nav-number">3.</span> <span class="nav-text">Operations on strings</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -571,6 +603,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
